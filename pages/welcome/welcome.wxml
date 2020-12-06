@@ -1,0 +1,11 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+<!-- <image src="/images/sakura.png" class="user-avatar"></image> -->
+<l-avatar placement="bottom" shape="circle" open-data="{{['userAvatarUrl','userNickName']}}" size="180" class="l-avatar"/>
+<text class="motto">Hello,Keeling!</text>
+<view class="btn-container">
+    <text class="btn" bind:tap="onTap">开启小程序之旅</text>
+</view>
+</view>
+
+

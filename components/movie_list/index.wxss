@@ -1,0 +1,21 @@
+/* components/movie_list/index.wxss */
+.container{
+    padding: 36rpx 28rpx;
+    /* border: solid 1px red; */
+    background-color: white;
+}
+.title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 28rpx;
+}
+.more-text{
+    color: #1f4ba5;
+    font-size: 28rpx;
+}
+.movie-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

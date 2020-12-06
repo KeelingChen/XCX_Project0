@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "post":"/components/post/index"
+  },
+  "navigationBarBackgroundColor": "#c22a1e",
+  "navigationBarTitleText": "阅读列表"
+}

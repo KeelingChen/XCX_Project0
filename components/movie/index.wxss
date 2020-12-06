@@ -1,0 +1,32 @@
+/* components/movie/index.wxss */
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 200rpx;
+}
+.poster{
+    width: 200rpx;
+    height: 270rpx;
+    margin-bottom: 22rpx;
+}
+
+.title{
+    /* 规定段落内文本不进行换行 */
+    white-space: nowrap;
+    /* 使用省略号来修剪文本 */
+    text-overflow: ellipsis;
+    /* 当内容溢出元素框时做的事 */
+    overflow: hidden;
+    /* 允许在单词内换行 */
+    word-break: break-all;
+}
+.rate-container{
+    margin-top: 6rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.score{
+    margin-left: 10rpx;
+    font-size: 24rpx;
+}

@@ -1,0 +1,55 @@
+<view class="container">
+   <image class="head-img" src="{{movie.images.large}}" mode="aspectFill"></image>
+   <view class="head-img-hover">
+      <text class="main-title">{{movie.original_title}}</text>
+      <text class="sub-title">{{movie.countries[0]+'.'+movie.year}}</text>
+      <view class="like">
+         <text class="highlight-font">{{movie.wish_count}}</text>
+         <text class="plain-font">人喜欢</text>
+         <text class="highlight-font">{{movie.comments_count}}</text>
+         <text class="plain-font">条评论</text>
+      </view>
+      <image class="movie-img" src="{{movie.images.large}}" bind:tap="viewMoviePostImg"></image>
+   </view>
+   <view class="summary">
+      <view class="original-title">
+         <text>{{movie.original_title}}</text>
+      </view>
+      <view class="flex-row">
+         <text class="mark">评分</text>
+         <view class="score-container">
+            <l-rate score="{{movie.rating.stars/10}}" size="23" disabled="{{true}}"></l-rate>
+            <text>{{movie.rating.average}}</text>
+         </view>
+      </view>
+      <view class="flex-row">
+         <text class="mark">导演:</text>
+         <text>{{amovie.directors}}</text>
+      </view>
+      <view class="flex-row">
+         <text class="mark">影人:</text>
+         <text>{{amovie.casts}}</text>
+      </view>
+      <view class="flex-row">
+         <text class="mark">类型:</text>
+         <text>{{amovie.genres}}</text>
+      </view>
+   </view>
+   <view class="hr"></view>
+   <view class="synopsis">
+      <text class="synopsis-font">剧情简介</text>
+      <text class="synopsis-content">{{movie.summary}}</text>
+   </view>
+   <view class="hr"></view>
+   <view class="casts">
+      <text class="casts-font">影人</text>
+      <scroll-view class="casts-container" scroll-x="{{true}}" enable-flex="{{true}}">
+         <block wx:for="{{amovie.info}}" wx:key="index">
+            <view class="casts-imgs">
+               <image class="casts-img" src="{{item.img}}"></image>
+               <text>{{item.name}}</text>
+            </view>
+         </block>
+      </scroll-view>
+   </view>
+</view>
